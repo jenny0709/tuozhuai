@@ -30,7 +30,7 @@ window.onload=function(){
             lenX=mx-dx;
             fangxiang=lenX>0?'right':'left';
             bigBox.style.transition="none";
-            bigBox.style.webkitTransform="translate3d("+(moveX+lenX)+"px,0,0)";
+            bigBox.style.webkitTransform="translate3d("+(moveX+lenX)+"px,0px,0px)";
         }
         document.addEventListener(mouseup,up);
         function up(e){
@@ -50,10 +50,10 @@ window.onload=function(){
                         i=lis.length-1;
                     }
                     moveX=-i*iw;
-                    bigBox.style.transition="transform 1s";
-                    bigBox.style.webkitTransform="translate3d("+moveX+"px,0,0)";
+                    bigBox.style.transition="webkitTransform 1s";
+                    bigBox.style.webkitTransform="translate3d("+moveX+"px,0px,0px)";
                 }else if(Math.abs(lenX)<iw/2){
-                    bigBox.style.webkitTransform="translate3d("+moveX+"px,0,0)";
+                    bigBox.style.webkitTransform="translate3d("+moveX+"px,0px,0px)";
                 }
             }
             document.removeEventListener(mousemove,move);
